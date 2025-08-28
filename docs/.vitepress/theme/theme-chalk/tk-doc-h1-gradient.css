@@ -1,0 +1,6 @@
+.VPDoc h1 {
+    background: -webkit-linear-gradient(10deg, #34a3e4 5%, #34f1fe 15%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent
+}
