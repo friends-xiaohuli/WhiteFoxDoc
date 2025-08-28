@@ -15,6 +15,9 @@ const vitepressSidebarOptions = {
 
 // VitePress 配置
 export default defineConfig({
+  head: [
+    ['script',{defer: '',async: '',src: 'https://cn.vercount.one/js'}]
+  ],
   vite: { 
     plugins: [ 
       GitChangelog({ 
@@ -51,7 +54,7 @@ export default defineConfig({
 
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Start', link: '/doc/Start' }
+      { text: 'Start', link: '/doc/start' }
     ],
 
     sidebar: 

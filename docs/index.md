@@ -23,13 +23,13 @@ features:
   - icon: 📝
     title: 什么？狐狸为什么会喵喵叫？
     details: 喵！狐狐不知道哦！
-  - icon: 📊
-    title: 本站访客数  (人次)
-    details: <span id="busuanzi_value_site_uv" /> 
   - icon: 📈
-    title: 本站总访问量 (次)
-    details: <span id="busuanzi_value_site_pv" /> 
----
+    title: 本站总访问量
+    details: <span id="vercount_value_site_pv">--</span> 次
+  - icon: 📊
+    title: 本站访客数
+    details: <span id="vercount_value_site_uv">--</span> 人
 
+---
 
 <Confetti />

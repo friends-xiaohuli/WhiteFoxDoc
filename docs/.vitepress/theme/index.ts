@@ -31,9 +31,12 @@ import '@nolebase/vitepress-plugin-enhanced-readabilities/client/style.css'
 //首页透明动画背景
 import Hero from './Layout.vue';
 
-//不蒜子，浏览量统计插件
+//不蒜子，浏览量统计插件（不好用
 import { inBrowser } from 'vitepress'
 import busuanzi from 'busuanzi.pure.js'
+
+//Vercount 浏览量统计
+import useVisitData from './hooks/useVisitData'
 
 //标题下添加时间
 import update from "./components/update.vue"
@@ -62,11 +65,19 @@ export default {
   enhanceApp({ app, router, siteData, }) {
     app.component("Confetti", Confetti); //开屏碎花
     app.use(NolebaseGitChangelogPlugin); //页面更新历史
+    //不蒜子
     if (inBrowser) {
       router.onAfterRouteChanged = () => {
         busuanzi.fetch()
       }
     };
+    //Vercount 
+    if (inBrowser) {
+      // 网站访问量统计，路由加载完成，在加载页面组件后（在更新页面组件之前）调用。
+      router.onAfterPageLoad = (to: string) => {
+        useVisitData()
+      }
+    }
     app.component('update' , update)//标题下添加时间
     app.component('ArticleMetadata' , ArticleMetadata)//字数及阅读时间 
     //链接卡片组件 下面4个 https://lumen.theojs.cn/guide/linkcard
