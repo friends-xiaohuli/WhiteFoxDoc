@@ -27,7 +27,7 @@ features:
     title: 本站总访问量
     details: <span id="vercount_value_site_pv">--</span> 次
   - icon: 📊
-    title: 本站访客数
+    title: 本站总访客数
     details: <span id="vercount_value_site_uv">--</span> 人
 
 ---
