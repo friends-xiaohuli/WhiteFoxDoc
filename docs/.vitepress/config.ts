@@ -58,13 +58,6 @@ export default defineConfig({
             { text: 'ALL', link: '/doc/start' },
           ]
         },
-        // {
-        //   text: '示例文件',
-        //   items: [
-        //     { text: 'Markdown Examples', link: '/doc/hide/markdown-examples' },
-        //     { text: 'Runtime API Examples', link: '/doc/hide/api-examples' },
-        //   ]
-        // },
         {
           text: '帮助',
           items: [
@@ -75,7 +68,7 @@ export default defineConfig({
         {
           text: '教程归档',
           items: [
-            { text: '01.生成随机数', link: '/doc/archive/01.生成随机数' },
+            { text: '01.数据包模块教程', link: '/doc/archive/01.数据包模块' },
           ]
         },
         {

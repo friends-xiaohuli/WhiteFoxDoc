@@ -29,9 +29,9 @@ title: "从这里开始"
 
 | 编号 | 玩法 | 文件夹名字 | 游戏版本 |
 | :----: | :----:| :----: | :----: |
-|1  | [受伤生物数量翻倍](#受伤生物数量翻倍) | sdshswfb | 1.21 |
-|2  | [受到伤害就随机传送](#受到伤害就删物品) | sdshsjcs | 1.21.8 |
-|3  | [受到伤害就删物品](#受到伤害就随机传送) | sdshswp | 1.21.8 |
+|1  | [受伤生物数量翻倍](#受伤生物数量翻倍) | sdshswfb | 1.21-1.21.9 |
+|2  | [受到伤害就随机传送](#受到伤害就随机传送) | sdshsjcs | 1.21.8 |
+|3  | [受到伤害就删物品](#受到伤害就删物品) | sdshswp | 1.21.8 |
 
 ---
 
@@ -43,14 +43,20 @@ title: "从这里开始"
 
 没有找到更好的复制方法，暂时就先这样吧，如果有条件可以寻找其他代替或者使用优化插件。
 
-数据包仅1.21可用。由于复制方法差异，**仅原版生物，模组生物无效**。
+已限制生成范围为玩家附近16个区块，超出区块未加载不生效！
+
+数据包1.21+可用。由于复制方法差异，**仅原版生物，模组生物无效**。
+
+适配进度 截止原版 1.21.9 铜傀儡
+
+感谢游玩。
 
 <Links
   :grid="2"
   :items="[
     // 普通图片
     {
-      image: '/img/01.gif',
+      image: '/assets/bilibili.png',
       name: '实况',
       desc: '卡死了卡死了卡死了，回头就给服务器装几个优化模组..',
       link: 'https://www.bilibili.com/video/BV1F8v1eCEmZ/',
@@ -64,9 +70,20 @@ title: "从这里开始"
         crop: true
       },
       name: 'GitHub',
-      desc: '跳转Github获取下载地址！',
+      desc: '跳转Github地址',
       link: 'https://github.com/friends-xiaohuli/XX-when-damaged/tree/main/sdshswfb',
       linkText: '跳转链接'
+    }
+  ]"
+/>
+
+<Links
+  :items="[
+    {
+      image: '/assets/Downloads_29996.ico',
+      name: '下载',
+      desc: '获取github下载直链',
+      link: 'https://github.com/friends-xiaohuli/XX-when-damaged/releases/download/20250829/Biological-doubling-when-damaged_1.21-1.21.8_v0.2.zip'
     }
   ]"
 />
@@ -96,10 +113,10 @@ title: "从这里开始"
   :items="[
     // 普通图片
     {
-      image: '/img/01.gif',
+      image: '/assets/bilibili.png',
       name: '实况',
-      desc: '暂无录制',
-      link: '404',
+      desc: '不知道怎么玩了，这好像不算实况（',
+      link: 'https://www.bilibili.com/video/BV13ohdz6ELi/',
       linkText: '立即查看'
     },
     // 深浅模式图片
@@ -110,9 +127,20 @@ title: "从这里开始"
         crop: true
       },
       name: 'GitHub',
-      desc: '跳转Github获取下载地址！',
+      desc: '跳转Github地址',
       link: 'https://github.com/friends-xiaohuli/XX-when-damaged/tree/main/sdshsjcs',
       linkText: '跳转链接'
+    }
+  ]"
+/>
+
+<Links
+  :items="[
+    {
+      image: '/assets/Downloads_29996.ico',
+      name: '下载',
+      desc: '获取github下载直链',
+      link: 'https://github.com/friends-xiaohuli/XX-when-damaged/releases/download/20250829/Randomly-teleport-when-damaged_1.21.8-v0.1.zip'
     }
   ]"
 />
@@ -132,10 +160,10 @@ title: "从这里开始"
 可用指令：
 
 `/scoreboard players set act hds_set 1`
-打开缓存伤害活动栏
+打开缓存伤害活动栏文本显示
 
 `/scoreboard players set act hds_set 0`
-关闭缓存伤害活动栏
+关闭缓存伤害活动栏文本显示
 
 `/scoreboard players set mode hds_set 1`
 模式1：ALL
@@ -148,9 +176,9 @@ title: "从这里开始"
 
 支持多人，在某人受到伤害后结算随机删除快捷栏、背包、主副手、盔甲栏共计42处地方，如果无物品将会缓存次数。
 
-**模式1：** 受伤后全体结算删除，每人随机不同，当所有玩家都无法结算后缓存。
+**模式1：** 受伤后全体结算删除，每人随机不同，当有玩家无法结算后启用随机，直到所有玩家都无法结算后缓存。(每次增加玩家人数的结算次数)
 
-**模式2：** 受伤后多人随机结算删除，每人随机不同，当目标玩家无法结算所有玩家都无法结算后缓存。
+**模式2：** 受伤后多人随机结算删除，每人随机不同，当目标玩家无法结算后再次随机，直到所有玩家都无法结算后缓存。
 
 注意：**无法避免随机到自己！都给我小心点！**
 
@@ -159,10 +187,10 @@ title: "从这里开始"
   :items="[
     // 普通图片
     {
-      image: '/img/01.gif',
+      image: '/assets/bilibili.png',
       name: '实况',
-      desc: '暂无录制',
-      link: '404',
+      desc: '不知道怎么玩了，这好像不算实况（',
+      link: 'https://www.bilibili.com/video/BV13ohdz6ELi/',
       linkText: '立即查看'
     },
     // 深浅模式图片
@@ -173,9 +201,20 @@ title: "从这里开始"
         crop: true
       },
       name: 'GitHub',
-      desc: '跳转Github获取下载地址！',
+      desc: '跳转Github地址',
       link: 'https://github.com/friends-xiaohuli/XX-when-damaged/tree/main/sdshswp',
       linkText: '跳转链接'
+    }
+  ]"
+/>
+
+<Links
+  :items="[
+    {
+      image: '/assets/Downloads_29996.ico',
+      name: '下载',
+      desc: '获取github下载直链',
+      link: 'https://github.com/friends-xiaohuli/XX-when-damaged/releases/download/20250829/Delete-items-when-damaged_1.21.8-v0.2.zip'
     }
   ]"
 />
