@@ -10,7 +10,8 @@ import {
 // VitePress 配置
 export default defineConfig({
   head: [
-    ['script',{defer: '',async: '',src: 'https://cn.vercount.one/js'}]
+    ['script',{defer: '',async: '',src: 'https://cn.vercount.one/js'}],
+    ['script', { src: '/live2d.js' }],
   ],
   vite: { 
     plugins: [ 

@@ -21,6 +21,8 @@ title: "从这里开始"
 
 其次确保命名空间是否重复，此页数据包所用的计分板等均有命名空间作为前缀不会重复！
 
+---
+
 ### 当受到伤害系列
 
 ::: tip
@@ -218,5 +220,102 @@ title: "从这里开始"
     }
   ]"
 />
+
+---
+
+### 只要听话就不会死
+
+开源协议：[GNU Affero General Public License v3.0(GNU AGPL-3)](https://www.gnu.org/licenses/agpl-3.0.txt)（仅适用于此小节）
+
+::: tip
+最新版的数据包请使用1.21.4游玩 测试正常
+:::
+
+活下去已经够难了！？怎么还有这些离谱事件啊！！！
+
+#### 主要玩法
+
+在普通生存中，完成对应任务，任务随机间隔时间触发，事件点扣除至0（或其他选择条件）死亡，仅剩1人时游戏结束
+
+<div style="display:flex; justify-content:center; gap:20px;">
+  <img src="https://s2.loli.net/2023/02/05/kNYKaoeymbsAG8O.png" alt="图1" style="width:300px;" />
+  <img src="https://s2.loli.net/2024/05/08/xa9fhrWGnVBRNUQ.png" alt="图2" style="width:300px;" />
+</div>
+
+#### 设置预览
+
+**设置书**：`/trigger book` *可以无权限获取，但在游戏进行中无法获取*
+
+::: details 展开查看图片
+
+<div style="display:flex; justify-content:center; gap:20px;">
+  <img src="https://s2.loli.net/2024/05/08/HksqiFBMvJyNQVP.png" alt="图1" style="width:300px;" />
+</div>
+
+![Snipaste_2023-11-08_14-57-34.png](https://s2.loli.net/2023/11/08/gqRc6yduEeLvHkS.png)
+
+![PixPin_2024-05-08_17-36-20.png](https://s2.loli.net/2024/05/08/Di6qdPETs4uL87S.png)
+
+![Snipaste_2024-03-02_01-06-26.png](https://s2.loli.net/2024/03/02/S3u1RHlWXZaDTYP.png)
+:::
+
+::: warning 注意  
+如遇书本排版错位等问题，请在 **语言设置** 中打开 **「强制使用 Unicode 字体」**  
+:::
+
+#### 模式
+
+| 玩法 | 描述 |
+| :----: | :----:|
+| 默认模式 | 所有玩家都可以完成任务，没有完成人数上限，没有第一名奖励。 |
+| 独占模式 | 每个任务都有且仅有一个人能完成，完成后将跳过直接进入冷却。 |
+
+#### 使用须知
+
+| 使用须知 | 描述 |
+| :----: | :---- |
+| 1-地图可重复利用 | 每局开始后，数据包将会重置系统，并且随机传送（出生点保护），随机地形开始 |
+| 2-多人模式 | 此数据包需要多人游玩，理论无人数上限，建议 3~8 人<br/>*此数据包含单人判定，强制结束* |
+| 3-数据包自定义设置 | 除重载数据包外，其余模式设定均可延续至下一轮<br/>***非必要时请勿重载数据包！*** |
+
+#### 已知特性
+
+| 已知特性 | 描述 |
+| :----: | :---- |
+| 1-拾取事件部分操作无效 | 由于进度条件限制，拾取事件需要由任意实体丢弃，挖掘掉落无效！ |
+| 2-服务端加载内存过大 | 由于加载地图数据量过大，可能导致服务端崩溃。请尝试使用优化插件或者换成客户端开服 |
+| 3-其他玩家部分聊天框控件失效 | 在对局域网端口开放的时候需要开启作弊，否则控件将无法有效执行！ |
+| 4-第三方端设置失效 | 部分第三方服务端运行此数据包时会导致如“死亡不掉落”等设置无法在除主世界外的维度生效，因此不建议使用服务端游玩此数据包 |
+
+#### 更多详情与反馈联系
+
+> 从 **0.27** 版本开始，反馈事件错误可直接反馈位于事件结束后的编号进行提交。
+
+- [GitHub Issues](https://github.com/friends-xiaohuli/sctz_ywsj/issues)
+- [MC百科](https://www.mcmod.cn/class/9254.html)
+- [MCBBS](https://www.mcbbs.net/thread-1449276-1-1.html) （已挂，仅此纪念）
+- [苦力怕论坛](https://klpbbs.com/thread-136943-1-1.html)
+
+#### 实况视频
+
+| 主播 | 视频 | 日期 | 备注 |
+| :----: | :---- | :----: | :---- |
+| @南镇st | [【任 务 大 作 战】](https://www.bilibili.com/video/BV1SC41137ZZ) | 24.04.17 | bilibili 源，dy、ks 均有 |
+| @佳楠很难 | [【指定任务挑战】](https://www.bilibili.com/video/BV1Ut421j7pw)<br>[【指定任务挑战下半段】](https://www.bilibili.com/video/BV1gp421Q7Es) | 24.04.21<br>24.04.22 | bilibili 源，dy、ks 均有 |
+| @谬木立羽 | [【我的世界，但“不听话就会死”？】](https://www.bilibili.com/video/BV1rbsse4EVF) | 24.08.27 | - |
+| @我的世界小黑犬解说 | [【当我们要不断「完成任务」！才能活下去！】](https://www.bilibili.com/video/BV1fAQoYZEej) | 25.03.19 | bilibili 源，dy、ks 均有 |
+| @大炒面制造者 Cen | [【当你无法「驯服一匹马」就会被淘汰出局？？！】](https://www.bilibili.com/video/BV1YuZUY5ECv) | 25.04.04 | - |
+
+#### tag标签
+
+指定任务挑战、任务大作战、要做挑战、反向不要做挑战、生存挑战之意外事件、多人挑战、生存挑战
+
+#### 特别鸣谢
+
+@白狗虚虚、@希克 和他的小伙伴、@Frazeli、@Rain、@枫荷 和他的小伙伴、@倩雪、@灵渊瑞兽、@陌上青花、@九九喵、@饭仙一桶、@苦瓜、@SeasonsC、@MO、@是椰灰噎、@zy华、@夕狡、@KIIFAN、@Qing_1_wa、@femweishi、@Maoochen、@忆迢、@梧桐  
+
+以及其他参与测试、指导、修改建议的小伙伴们！（排名不分先后）
+
+---
 
 <!-- <NolebaseGitChangelog /> -->

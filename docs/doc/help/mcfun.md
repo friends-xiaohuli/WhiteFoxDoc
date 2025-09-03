@@ -21,7 +21,7 @@ title: "数据包帮助"
   :grid="2"
   :items="[
     {
-      image: 'https://www.mcmod.cn/static/public/images/logo.png',
+      image: 'https://www.mcmod.cn/static/public/images/favicon.ico',
       name: 'MC百科',
       desc: '数据包安装指南',
       link: 'https://www.mcmod.cn/post/2334.html',
