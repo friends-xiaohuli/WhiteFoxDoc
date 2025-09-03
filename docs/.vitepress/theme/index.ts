@@ -13,7 +13,7 @@ import { NolebaseGitChangelogPlugin } from '@nolebase/vitepress-plugin-git-chang
 import '@nolebase/vitepress-plugin-git-changelog/client/style.css'
 
 //页脚等
-import { h } from 'vue'
+import { h, onMounted } from 'vue'
 import { Footer } from '@theojs/lumen'
 import { Footer_Data } from './data/footerData'
 
@@ -49,10 +49,6 @@ import ArticleMetadata from "./components/ArticleMetadata.vue"
 //链接卡片组件 
 import { BoxCube, Card, Links, Pill } from '@theojs/lumen'
 
-//live2d看板娘 右侧
-import { useLive2d } from 'vitepress-theme-website'
-
-
 export default {
   extends: DefaultTheme,
   Layout() {
@@ -77,13 +73,13 @@ export default {
     //     busuanzi.fetch()
     //   }
     // };
-    // //Vercount 
-    // if (inBrowser) {
-    //   // 网站访问量统计，路由加载完成，在加载页面组件后（在更新页面组件之前）调用。
-    //   router.onAfterPageLoad = (to: string) => {
-    //     useVisitData()
-    //   }
-    // }
+    //Vercount 浏览量统计
+    if (inBrowser) {
+      // 网站访问量统计，路由加载完成，在加载页面组件后（在更新页面组件之前）调用。
+      router.onAfterPageLoad = (to: string) => {
+        useVisitData()
+      }
+    }
     app.component('update', update)//标题下添加时间
     app.component('ArticleMetadata', ArticleMetadata)//字数及阅读时间 
     //链接卡片组件 下面4个 https://lumen.theojs.cn/guide/linkcard
@@ -93,51 +89,24 @@ export default {
     app.component('BoxCube', BoxCube)
   },
 
-  //live2d看板娘 右侧
-  // setup() {
-  //   useLive2d({
-  //     enable: true,
-  //     model: {
-  //       url: 'https://model.hacxy.cn/HK416-1-normal/model.json'
-  //     },
-  //     display: {
-  //       position: 'right',
-  //       width: '200px',
-  //       height: '300px',
-  //       xOffset: '35px',
-  //       yOffset: '5px'
-  //     },
-  //     mobile: {
-  //       show: true
-  //     },
-  //     react: {
-  //       opacity: 0.8
-  //     }
-  //   })
-  // },
-
-  async setup() {
-    //live2d 异步
-    //官网资源https://oml2d.hacxy.cn/
-    //模型资源https://github.com/oh-my-live2d/live2d-models
-    const { loadOml2d } = await import('oh-my-live2d')
-    loadOml2d({
-      models: [
-        {
-          path: 'https://model.hacxy.cn/HK416-2-normal/model.json',
-          position: [0, 60],
-          scale: 0.08,
-          stageStyle: {
-            height: 450
+  
+  setup() {
+    //live2d看板娘
+    onMounted(async () => {
+      // 只在客户端执行
+      const { loadOml2d } = await import('oh-my-live2d')
+      loadOml2d({
+        models: [
+          {
+            path: 'https://model.hacxy.cn/HK416-2-normal/model.json',
+            position: [0, 60],
+            scale: 0.08,
+            stageStyle: { height: 450 }
           }
-        }
-      ],
-      menus: {
-        disable: true
-      },
-      statusBar:{
-        disable: true
-      }
+        ],
+        menus: { disable: true },
+        statusBar: { disable: true }
+      })
     })
   }
   // ...
