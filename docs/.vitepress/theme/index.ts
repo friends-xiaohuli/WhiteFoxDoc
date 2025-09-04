@@ -1,5 +1,6 @@
 import DefaultTheme from 'vitepress/theme'
 import './custom.css'
+import { inBrowser } from 'vitepress'
 
 /* 彩花 */
 import Confetti from "./components/Confetti.vue";
@@ -33,10 +34,6 @@ import '@nolebase/vitepress-plugin-enhanced-readabilities/client/style.css'
 //首页透明动画背景
 import Hero from './Layout.vue';
 
-//不蒜子，浏览量统计插件（不好用
-import { inBrowser } from 'vitepress'
-import busuanzi from 'busuanzi.pure.js'
-
 //Vercount 浏览量统计
 import useVisitData from './hooks/useVisitData'
 
@@ -48,6 +45,13 @@ import ArticleMetadata from "./components/ArticleMetadata.vue"
 
 //链接卡片组件 
 import { BoxCube, Card, Links, Pill } from '@theojs/lumen'
+
+// 进度条
+import { NProgress } from 'nprogress-v2/dist/index.js' // 进度条组件
+import 'nprogress-v2/dist/index.css' // 进度条样式
+
+//锚点随滚动更新
+import initActiveHeaderLinks from './tools/active-header-links.ts'
 
 export default {
   extends: DefaultTheme,
@@ -67,18 +71,23 @@ export default {
   enhanceApp({ app, router, siteData, }) {
     app.component("Confetti", Confetti); //开屏碎花
     app.use(NolebaseGitChangelogPlugin); //页面更新历史
-    // //不蒜子
-    // if (inBrowser) {
-    //   router.onAfterRouteChanged = () => {
-    //     busuanzi.fetch()
-    //   }
-    // };
-    //Vercount 浏览量统计
     if (inBrowser) {
+
+      //切换路由进度条 
+      NProgress.configure({ showSpinner: false })
+      router.onBeforeRouteChange = () => {
+        NProgress.start() // 开始进度条
+      }
+      router.onAfterRouteChanged = () => {
+         NProgress.done() // 停止进度条
+      }
+      
+      //Vercount 浏览量统计
       // 网站访问量统计，路由加载完成，在加载页面组件后（在更新页面组件之前）调用。
       router.onAfterPageLoad = (to: string) => {
         useVisitData()
       }
+      
     }
     app.component('update', update)//标题下添加时间
     app.component('ArticleMetadata', ArticleMetadata)//字数及阅读时间 
@@ -87,6 +96,12 @@ export default {
     app.component('Links', Links)
     app.component('Card', Card)
     app.component('BoxCube', BoxCube)
+    //锚点随滚动更新
+    if (typeof window !== 'undefined') {
+      setTimeout(() => {
+        initActiveHeaderLinks({ router, selector: 'h2[id], h3[id]', activeClass: 'active' })
+      }, 80)
+    }
   },
 
   

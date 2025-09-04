@@ -47,6 +47,9 @@ importers:
       mermaid:
         specifier: ^11.10.1
         version: 11.10.1
+      nprogress-v2:
+        specifier: ^1.1.10
+        version: 1.1.10
       oh-my-live2d:
         specifier: ^0.19.3
         version: 0.19.3
@@ -65,6 +68,9 @@ importers:
       vitepress-plugin-mermaid:
         specifier: ^2.0.17
         version: 2.0.17(mermaid@11.10.1)(vitepress@1.6.4(@algolia/client-search@5.36.0)(less@4.4.1)(markdown-it-mathjax3@4.3.2)(postcss@8.5.6)(sass-embedded@1.91.0)(sass@1.91.0)(search-insights@2.17.3)(typescript@5.9.2))
+      vitepress-protect-plugin:
+        specifier: ^1.0.6
+        version: 1.0.6(vite@5.4.19(less@4.4.1)(sass-embedded@1.91.0)(sass@1.91.0))
       vitepress-sidebar:
         specifier: ^1.33.0
         version: 1.33.0
@@ -1888,6 +1894,9 @@ packages:
     resolution: {integrity: sha512-9qny7Z9DsQU8Ou39ERsPU4OZQlSTP47ShQzuKZ6PRXpYLtIFgl/DEBYEXKlvcEa+9tHVcK8CF81Y2V72qaZhWA==}
     engines: {node: '>=18'}
 
+  nprogress-v2@1.1.10:
+    resolution: {integrity: sha512-MypWLNIPIM07SS0bAc/oac0vhVFz9vAHm7d1sj//Pnf3J03LQ3CuWrlDteIu6exq0fIvkDJ6tUDRWLaifsIt5w==}
+
   nth-check@2.1.1:
     resolution: {integrity: sha512-lqjrjmaOoAnWfMmBPL+XNnynZh2+swxiX3WUE0s4yEHI6m+AwrK2UZOimIRl3X/4QctVqS8AiZjFqyOGrMXb/w==}
 
@@ -2413,6 +2422,11 @@ packages:
     peerDependencies:
       mermaid: 10 || 11
       vitepress: ^1.0.0 || ^1.0.0-alpha
+
+  vitepress-protect-plugin@1.0.6:
+    resolution: {integrity: sha512-4gO5NYNrAaD99+/5Qp/QPURTZC2MZ6UMl/gnxfBAIRasxw6r/mdjcluUNLxEFT8WUMX19KgGu4SSLFcKwfeBtQ==}
+    peerDependencies:
+      vite: ^2.0.0 || ^3.0.0 || ^4.0.0
 
   vitepress-sidebar@1.33.0:
     resolution: {integrity: sha512-+z45vGG6OQRKNU7OMhmrp5y9dk9Y8loFZGE2LwzqloqA4p+ECP3/Ti6qrS8kB3N8Rol4v0Nf8HSnsgZEDU4HXQ==}
@@ -4601,6 +4615,8 @@ snapshots:
       path-key: 4.0.0
       unicorn-magic: 0.3.0
 
+  nprogress-v2@1.1.10: {}
+
   nth-check@2.1.1:
     dependencies:
       boolbase: 1.0.0
@@ -5104,6 +5120,10 @@ snapshots:
       vitepress: 1.6.4(@algolia/client-search@5.36.0)(less@4.4.1)(markdown-it-mathjax3@4.3.2)(postcss@8.5.6)(sass-embedded@1.91.0)(sass@1.91.0)(search-insights@2.17.3)(typescript@5.9.2)
     optionalDependencies:
       '@mermaid-js/mermaid-mindmap': 9.3.0
+
+  vitepress-protect-plugin@1.0.6(vite@5.4.19(less@4.4.1)(sass-embedded@1.91.0)(sass@1.91.0)):
+    dependencies:
+      vite: 5.4.19(less@4.4.1)(sass-embedded@1.91.0)(sass@1.91.0)
 
   vitepress-sidebar@1.33.0:
     dependencies:

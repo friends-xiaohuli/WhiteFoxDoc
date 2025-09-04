@@ -6,12 +6,14 @@ import {
   GitChangelogMarkdownSection, 
 } from '@nolebase/vitepress-plugin-git-changelog/vite'
 
+//禁用F12 
+import vitepressProtectPlugin from "vitepress-protect-plugin"
+
 
 // VitePress 配置
 export default defineConfig({
   head: [
     ['script',{defer: '',async: '',src: 'https://cn.vercount.one/js'}],
-    ['script', { src: '/live2d.js' }],
   ],
   vite: { 
     plugins: [ 
@@ -23,6 +25,14 @@ export default defineConfig({
         sections:{
           disableContributors: true
         }
+      }),
+      vitepressProtectPlugin({
+        // disableF12: false, // 禁用F12开发者模式
+        // disableCopy: false, // 禁用文本复制
+        // disableSelect: false, // 禁用文本选择
+        disableF12: true, // 禁用F12开发者模式
+        disableCopy: true, // 禁用文本复制
+        disableSelect: true, // 禁用文本选择
       }),
     ],
     optimizeDeps: {
@@ -41,6 +51,7 @@ export default defineConfig({
     }, 
   }, 
   cleanUrls: true, //开启纯净链接
+  lastUpdated: true, //首次配置不会立即生效，需git提交后爬取时间戳
   lang: 'zh-CN',
   title: "WhiteFoxDoc 喵~",
   description: "WhiteFoxDoc",
@@ -63,7 +74,6 @@ export default defineConfig({
           text: '帮助',
           items: [
             { text: '我的世界 FUN', link: '/doc/help/mcfun' },
-            // { text: 'Runtime API Examples', link: '/doc/api-examples' },
           ]
         },
         {
@@ -104,8 +114,19 @@ export default defineConfig({
         },
       },
     },
-    outlineTitle: "页面导航",
-    outline: [2,6],
+    outline: {
+      level: [2, 4],   // 控制显示 H2~H4
+      label: "页面导航"
+    },
+
+    //上次更新时间
+    lastUpdated: {
+      text: '最后更新于',
+      formatOptions: {
+        dateStyle: 'short', // 可选值full、long、medium、short
+        timeStyle: 'medium' // 可选值full、long、medium、short
+      },
+    },
   },
   markdown: {
     // 代码块行号显示
@@ -119,11 +140,13 @@ export default defineConfig({
     //字数及阅读时间 
     config: (md) => {
       md.renderer.rules.heading_close = (tokens, idx, options, env, slf) => {
-          let htmlResult = slf.renderToken(tokens, idx, options);
-          if (tokens[idx].tag === 'h1') htmlResult += `<ArticleMetadata />`; 
-          return htmlResult;
+        let htmlResult = slf.renderToken(tokens, idx, options);
+        if (tokens[idx].tag === 'h1') htmlResult += `<ArticleMetadata />`;
+        return htmlResult;
       }
     }
   },
+
+
   // ...
 })
