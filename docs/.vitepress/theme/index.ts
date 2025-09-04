@@ -51,7 +51,7 @@ import { NProgress } from 'nprogress-v2/dist/index.js' // 进度条组件
 import 'nprogress-v2/dist/index.css' // 进度条样式
 
 //锚点随滚动更新
-import initActiveHeaderLinks from './plugins/active-header-links.ts'
+// import initActiveHeaderLinks from './plugins/active-header-links.ts'
 
 
 export default {
@@ -97,12 +97,12 @@ export default {
     app.component('Links', Links)
     app.component('Card', Card)
     app.component('BoxCube', BoxCube)
-    //锚点随滚动更新
-    if (typeof window !== 'undefined') {
-      setTimeout(() => {
-        initActiveHeaderLinks({ router, selector: 'h2[id], h3[id]', activeClass: 'active' })
-      }, 80)
-    }
+    // //锚点随滚动更新
+    // if (typeof window !== 'undefined') {
+    //   setTimeout(() => {
+    //     initActiveHeaderLinks({ router, selector: 'h2[id], h3[id]', activeClass: 'active' })
+    //   }, 80)
+    // }
   },
 
   
@@ -129,7 +129,7 @@ export default {
 };
 
 if (typeof window !== 'undefined') {
-  // 禁用右键菜单
+  // 禁用右键
   document.addEventListener('contextmenu', e => e.preventDefault())
 
   // 禁用 F12、Ctrl+Shift+I/C、Ctrl+U
@@ -151,16 +151,21 @@ if (typeof window !== 'undefined') {
   // 全局 CSS 防止选中和拖拽
   const style = document.createElement('style')
   style.textContent = `
+    /* 禁止选中、复制 */
     * {
       -webkit-user-select: none !important;
       -moz-user-select: none !important;
       -ms-user-select: none !important;
       user-select: none !important;
     }
+
+    /* 禁止拖拽 */
     img, a {
-      -webkit-user-drag: none !important;
-      user-drag: none !important;
+      -webkit-user-drag: none; /* Chrome / Safari / Edge (Blink) */
+      -khtml-user-drag: none;  /* 旧版 Konqueror */
+      pointer-events: auto !important; /* 保证链接可点击 */
     }
   `
   document.head.appendChild(style)
 }
+
