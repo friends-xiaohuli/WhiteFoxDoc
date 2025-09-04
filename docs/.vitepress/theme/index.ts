@@ -51,7 +51,8 @@ import { NProgress } from 'nprogress-v2/dist/index.js' // 进度条组件
 import 'nprogress-v2/dist/index.css' // 进度条样式
 
 //锚点随滚动更新
-import initActiveHeaderLinks from './tools/active-header-links.ts'
+import initActiveHeaderLinks from './plugins/active-header-links.ts'
+
 
 export default {
   extends: DefaultTheme,
@@ -126,3 +127,40 @@ export default {
   }
   // ...
 };
+
+if (typeof window !== 'undefined') {
+  // 禁用右键菜单
+  document.addEventListener('contextmenu', e => e.preventDefault())
+
+  // 禁用 F12、Ctrl+Shift+I/C、Ctrl+U
+  document.addEventListener('keydown', e => {
+    if (
+      e.key === 'F12' ||
+      (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+      (e.ctrlKey && e.shiftKey && e.key === 'C') ||
+      (e.ctrlKey && e.key === 'u')
+    ) {
+      e.preventDefault()
+    }
+  })
+
+  // 禁止选中和复制
+  document.addEventListener('selectstart', e => e.preventDefault())
+  document.addEventListener('copy', e => e.preventDefault())
+
+  // 全局 CSS 防止选中和拖拽
+  const style = document.createElement('style')
+  style.textContent = `
+    * {
+      -webkit-user-select: none !important;
+      -moz-user-select: none !important;
+      -ms-user-select: none !important;
+      user-select: none !important;
+    }
+    img, a {
+      -webkit-user-drag: none !important;
+      user-drag: none !important;
+    }
+  `
+  document.head.appendChild(style)
+}

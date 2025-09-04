@@ -6,10 +6,6 @@ import {
   GitChangelogMarkdownSection, 
 } from '@nolebase/vitepress-plugin-git-changelog/vite'
 
-//禁用F12 
-import vitepressProtectPlugin from "vitepress-protect-plugin"
-
-
 // VitePress 配置
 export default defineConfig({
   head: [
@@ -25,14 +21,6 @@ export default defineConfig({
         sections:{
           disableContributors: true
         }
-      }),
-      vitepressProtectPlugin({
-        // disableF12: false, // 禁用F12开发者模式
-        // disableCopy: false, // 禁用文本复制
-        // disableSelect: false, // 禁用文本选择
-        disableF12: true, // 禁用F12开发者模式
-        disableCopy: true, // 禁用文本复制
-        disableSelect: true, // 禁用文本选择
       }),
     ],
     optimizeDeps: {
