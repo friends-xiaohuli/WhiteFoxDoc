@@ -54,3 +54,22 @@ title: "关于白狐"
     }
   ]"
 />
+
+## 友链
+
+<Links
+  :grid="1"
+  :items="[
+    {
+      image: 'https://raw.githubusercontent.com/azaneNH37/OriginiumArtsWiki/refs/heads/main/docs/.vuepress/public/icon_wiki.png',
+      name: 'OriginiumArts 源石技艺',
+      desc: '0201799（NH37：来自提丰的肯定',
+      link: 'https://originiumarts.0201799.xyz/OriginiumArtsWiki/',
+      linkText: '点击跳转'
+    }
+  ]"
+/>
+
+<div style="display:flex; justify-content:center; gap:20px;">
+  <img src="\assets\799dkd.jpeg" alt="来自提丰的肯定" style="width:50px;" />
+</div>
