@@ -1,6 +1,6 @@
 import DefaultTheme from 'vitepress/theme'
 import './custom.css'
-import { inBrowser } from 'vitepress'
+import { inBrowser, useRoute } from 'vitepress'
 
 /* 彩花 */
 import Confetti from "./components/Confetti.vue";
@@ -53,6 +53,9 @@ import 'nprogress-v2/dist/index.css' // 进度条样式
 //锚点随滚动更新
 // import initActiveHeaderLinks from './plugins/active-header-links.ts'
 
+//图片预览/放大
+import imageViewer from 'vitepress-plugin-image-viewer'
+import vImageViewer from 'vitepress-plugin-image-viewer/lib/vImageViewer.vue'
 
 export default {
   extends: DefaultTheme,
@@ -103,6 +106,7 @@ export default {
     //     initActiveHeaderLinks({ router, selector: 'h2[id], h3[id]', activeClass: 'active' })
     //   }, 80)
     // }
+    app.component('vImageViewer', vImageViewer)
   },
 
   
@@ -124,7 +128,10 @@ export default {
         statusBar: { disable: true }
       })
     })
-  }
+    const route = useRoute()
+    imageViewer(route)
+  },
+
   // ...
 };
 

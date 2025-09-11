@@ -10,6 +10,7 @@ import {
 export default defineConfig({
   head: [
     ['script',{defer: '',async: '',src: 'https://cn.vercount.one/js'}],
+    ['link',{rel:'icon',href:'/assets/logo.png'}]
   ],
   vite: { 
     plugins: [ 
@@ -56,6 +57,8 @@ export default defineConfig({
           text: '喵！！！',
           items: [
             { text: 'ALL', link: '/doc/start' },
+            { text: 'Minecraft', link: '/doc/Minecraft' },
+            { text: 'Oxygen Not Included', link: '/doc/OxygenNI' },
           ]
         },
         {

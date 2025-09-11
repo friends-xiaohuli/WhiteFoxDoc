@@ -61,10 +61,10 @@ title: "关于白狐"
   :grid="1"
   :items="[
     {
-      image: 'https://raw.githubusercontent.com/azaneNH37/OriginiumArtsWiki/refs/heads/main/docs/.vuepress/public/icon_wiki.png',
+      image: 'https://originiumarts.0201799.xyz/icon_wiki.png',
       name: 'OriginiumArts 源石技艺',
       desc: '0201799（NH37：来自提丰的肯定',
-      link: 'https://originiumarts.0201799.xyz/OriginiumArtsWiki/',
+      link: 'https://originiumarts.0201799.xyz/',
       linkText: '点击跳转'
     }
   ]"
