@@ -71,6 +71,7 @@ export default defineConfig({
           text: '教程归档',
           items: [
             { text: '01.数据包模块教程', link: '/doc/archive/01.数据包模块' },
+            // { text: '02.GLSL着色器.md', link: '/doc/archive/02.GLSL着色器' },
           ]
         },
         {

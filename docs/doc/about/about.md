@@ -69,7 +69,19 @@ title: "关于白狐"
     }
   ]"
 />
-
 <div style="display:flex; justify-content:center; gap:20px;">
   <img src="\assets\799dkd.jpeg" alt="来自提丰的肯定" style="width:50px;" />
 </div>
+
+<Links
+  :grid="1"
+  :items="[
+    {
+      image: '/img/06.gif',
+      name: '无游夜明',
+      desc: '你好，我是 mawuyi. Minecraft腐竹 · 无业游民',
+      link: 'https://www.mawuyi.top',
+      linkText: '点击跳转'
+    }
+  ]"
+/>
