@@ -79,6 +79,12 @@ export default defineConfig({
           items: [
             { text: '关于我们', link: '/doc/about/about' },
           ]
+        },
+        {
+          text: '分发',
+          items: [
+            { text: '【服务器】蔚蓝天际线', link: '/doc/promotions/adastra' },
+          ]
         }
       ],
 

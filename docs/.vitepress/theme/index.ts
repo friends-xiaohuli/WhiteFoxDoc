@@ -57,6 +57,7 @@ import 'nprogress-v2/dist/index.css' // 进度条样式
 import imageViewer from 'vitepress-plugin-image-viewer'
 import vImageViewer from 'vitepress-plugin-image-viewer/lib/vImageViewer.vue'
 
+
 export default {
   extends: DefaultTheme,
   Layout() {
@@ -125,7 +126,8 @@ export default {
           }
         ],
         menus: { disable: true },
-        statusBar: { disable: true }
+        statusBar: { disable: true },
+        dockedPosition:"right"
       })
     })
     const route = useRoute()

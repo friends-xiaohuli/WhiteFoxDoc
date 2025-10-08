@@ -85,3 +85,16 @@ title: "关于白狐"
     }
   ]"
 />
+
+<Links
+  :grid="1"
+  :items="[
+    {
+      image: '/assets/adastra/icon.jpg',
+      name: '蔚蓝天际线 AD-ASTRA',
+      desc: '',
+      link: '../promotions/adastra',
+      linkText: '点击跳转'
+    }
+  ]"
+/>
