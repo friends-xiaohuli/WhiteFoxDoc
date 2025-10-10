@@ -33,6 +33,10 @@ QQ群：810716436
 
 IP： asadastra.cn
 
+```text
+asadastra.cn
+```
+
 游戏版本：1.21.8
 
 正版验证：关
