@@ -221,6 +221,63 @@ title: "Minecraft!"
 
 ---
 
+#### 受到伤害才扩大边界
+
+> EN：Expand boundaries when damaged
+>
+> 命名空间：hdk
+
+受到伤害才会扩大边界
+
+数据包仅1.21.8可用。
+
+**加载自动初始化，重载不重置进度**。
+
+如需 **重置进度** 或 **更换边界中心** 请使用以下指令重新触发初始化：
+
+`/function hdk:ini`
+
+建议使用极限模式游玩。
+
+<Links
+  :grid="2"
+  :items="[
+    // 普通图片
+    {
+      image: '/assets/bilibili.png',
+      name: '灵感来源',
+      desc: '对的对的，对着视频做的（',
+      link: 'https://www.bilibili.com/video/BV1MoxXzLEXd',
+      linkText: '立即查看'
+    },
+    // 深浅模式图片
+    {
+      image: {
+        light: 'https://i.theojs.cn/logo/github.svg',
+        dark: 'https://i.theojs.cn/logo/github-dark.svg',
+        crop: true
+      },
+      name: 'GitHub',
+      desc: '跳转Github地址',
+      link: 'https://github.com/friends-xiaohuli/XX-when-damaged/tree/main/sdshbjkd',
+      linkText: '跳转链接'
+    }
+  ]"
+/>
+
+<Links
+  :items="[
+    {
+      icon: { icon: 'material-symbols:archive', color: '#1769AA' },
+      name: '下载',
+      desc: '获取github下载直链',
+      link: 'https://github.com/friends-xiaohuli/XX-when-damaged/releases/download/20251010/Expand-boundaries-when-damaged_1.21.8-v0.2.zip'
+    }
+  ]"
+/>
+
+---
+
 ### 只要听话就不会死
 
 开源协议：[GNU Affero General Public License v3.0(GNU AGPL-3)](https://www.gnu.org/licenses/agpl-3.0.txt)（仅适用于此小节）
