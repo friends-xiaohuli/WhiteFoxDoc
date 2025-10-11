@@ -20,6 +20,67 @@ title: "Minecraft!"
 
 ---
 
+### 吃东西就会随机生成生物
+
+> EN：Random Munch Monsters
+>
+> 命名空间：rmm
+
+数据包仅1.21.8可用。
+
+由于数据包结构问题，仅支持**原版食物**以及**原版生物**生成。
+
+- 原版食物：共计41个（不包含 **水瓶、药水瓶、蛋糕、不祥之瓶、奶瓶**）
+
+- 原版生物：共计86个（包含 **盔甲架** 等）
+
+由于注册策略食物可能**无法自行添加**更多，生物可尝试新增或修改。
+
+::: details 展开查看图片
+<div style="display:flex; justify-content:center; gap:20px;">
+  <img src="/assets/miaocraft/rmm01.png" alt="rmm-img01" style="width:800px;" />
+</div>
+:::
+
+<Links
+  :grid="2"
+  :items="[
+    // 普通图片
+    {
+      image: '/assets/bilibili.png',
+      name: '灵感来源',
+      desc: '对的对的，对着视频做的',
+      link: 'https://www.bilibili.com/video/BV1wv4JzLEDz',
+      linkText: '立即查看'
+    },
+    // 深浅模式图片
+    {
+      image: {
+        light: 'https://i.theojs.cn/logo/github.svg',
+        dark: 'https://i.theojs.cn/logo/github-dark.svg',
+        crop: true
+      },
+      name: 'GitHub',
+      desc: '跳转Github地址',
+      link: 'https://github.com/friends-xiaohuli/XX-when-damaged/releases/tag/20251011',
+      linkText: '跳转链接'
+    }
+  ]"
+/>
+
+<Links
+  :items="[
+    {
+      icon: { icon: 'material-symbols:archive', color: '#1769AA' },
+      name: '下载',
+      desc: '获取github下载直链',
+      link: 'https://github.com/friends-xiaohuli/XX-when-damaged/releases/download/20251011/Random-Munch-Monsters_1.21.8-v0.1.zip'
+    }
+  ]"
+/>
+
+---
+
 ### 当受到伤害系列
 
 ::: tip

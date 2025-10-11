@@ -120,13 +120,14 @@ export default {
         models: [
           {
             path: 'https://model.hacxy.cn/HK416-2-normal/model.json',
+            scale: 0.06,
             position: [0, 60],
-            scale: 0.08,
-            stageStyle: { height: 450 }
+            stageStyle: { height: 360 },
           }
         ],
         menus: { disable: true },
         statusBar: { disable: true },
+        tips:{ style: {width:200} },
         dockedPosition:"right"
       })
     })
