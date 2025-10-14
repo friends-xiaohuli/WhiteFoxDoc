@@ -70,7 +70,7 @@ title: "关于白狐"
   ]"
 />
 <div style="display:flex; justify-content:center; gap:20px;">
-  <img src="\assets\799dkd.jpeg" alt="来自提丰的肯定" style="width:50px;" />
+  <img src="/assets/799dkd.jpeg" alt="来自提丰的肯定" style="width:50px;" />
 </div>
 
 <Links
@@ -98,3 +98,7 @@ title: "关于白狐"
     }
   ]"
 />
+
+<div style="display:flex; justify-content:center; gap:20px;">
+  <img src="/assets/avatar_activity_FD.png" alt="提丰" style="width:100px;" />
+</div>

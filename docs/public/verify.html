@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>访问验证</title>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        overflow: hidden; /* 🚫 禁止滚动条 */
+        font-family: 'Segoe UI', Roboto, sans-serif;
+        background: #000;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center; /* ✅ 水平 + 垂直居中 */
+      }
+
+      /* 🌄 背景层 */
+      .bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        background-size: cover;
+        background-position: center;
+        filter: brightness(0.65) blur(2px);
+      }
+
+      /* 🔮 磨砂玻璃容器 */
+      .glass-box {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        width: clamp(280px, 50vw, 460px);
+        padding: 3rem 2rem;
+        backdrop-filter: blur(12px) saturate(160%);
+        -webkit-backdrop-filter: blur(12px) saturate(160%);
+        background: rgba(255, 255, 255, 0.12);
+        border-radius: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+        transition: all 0.3s ease;
+      }
+
+      .glass-box:hover {
+        background: rgba(255, 255, 255, 0.15);
+        transform: translateY(-2px);
+      }
+
+      .cf-turnstile {
+        transform: scale(1.1);
+      }
+
+      h2 {
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        margin: 0;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+      }
+
+      footer {
+        position: absolute;
+        bottom: 15px;
+        text-align: center;
+        width: 100%;
+        font-size: 12px;
+        color: rgba(255,255,255,0.5);
+      }
+
+      /* 禁止选中与右键 */
+      * {
+        user-select: none !important;
+        -webkit-user-select: none !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg" id="bg"></div>
+
+    <div class="glass-box">
+      <h2>请完成验证以继续访问</h2>
+      <div
+        class="cf-turnstile"
+        data-sitekey="0x4AAAAAAB6jQBnBUS14VvNt"
+        data-callback="onTurnstileSuccess"
+      ></div>
+    </div>
+
+    <footer>© 2025 小狐狸 | Cloudflare Turnstile</footer>
+
+    <script>
+        // 🚫 禁止手动访问 verify.html（除非有 redirect 参数）
+        const params = new URLSearchParams(location.search);
+        const redirect = params.get('redirect');
+        if (!redirect) {
+        document.body.innerHTML = `
+            <div style="
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:rgba(0,0,0,0.7);
+            backdrop-filter:blur(12px);
+            -webkit-backdrop-filter:blur(12px);
+            ">
+            <div style="
+                text-align:center;
+                padding:2rem 3rem;
+                border-radius:16px;
+                background:rgba(255,255,255,0.12);
+                border:1px solid rgba(255,255,255,0.25);
+                box-shadow:0 0 20px rgba(0,0,0,0.4);
+                font-size:1.1rem;
+                color:#fff;
+                line-height:1.8;
+            ">
+                <strong>本次验证请求无效</strong><br/>即将返回站点首页
+            </div>
+            </div>
+        `;
+        setTimeout(() => (location.href = '/'), 2000);
+        }
+
+
+      // ✅ 验证成功后返回原路径
+      function onTurnstileSuccess() {
+        document.cookie = "turnstile_verified=true; max-age=86400; path=/";
+        const target = redirect ? decodeURIComponent(redirect) : "/";
+        location.href = target;
+      }
+
+      // 🎨 随机背景图
+      const bgApi = "https://www.loliapi.com/acg/";
+      document.getElementById('bg').style.backgroundImage = `url('${bgApi}')`;
+
+      // 🛑 禁用调试和右键
+      document.addEventListener('contextmenu', e => e.preventDefault());
+      document.addEventListener('keydown', e => {
+        if (
+          e.key === 'F12' ||
+          (e.ctrlKey && e.shiftKey && e.key.toUpperCase() === 'I') ||
+          (e.ctrlKey && e.key.toUpperCase() === 'U')
+        ) e.preventDefault();
+      });
+      document.addEventListener('selectstart', e => e.preventDefault());
+      document.addEventListener('copy', e => e.preventDefault());
+    </script>
+  </body>
+</html>

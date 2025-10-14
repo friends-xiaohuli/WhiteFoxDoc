@@ -10,7 +10,23 @@ import {
 export default defineConfig({
   head: [
     ['script',{defer: '',async: '',src: 'https://cn.vercount.one/js'}],
-    ['link',{rel:'icon',href:'/assets/logo.png'}]
+    ['link',{rel:'icon',href:'/assets/logo.png'}],
+    [
+      'script',
+      {},
+      `
+      (function() {
+        const verified = document.cookie.includes('turnstile_verified=true')
+        const inVerify = location.pathname.includes('verify.html')
+
+        if (!verified && !inVerify) {
+          // 记录当前访问路径
+          const redirect = encodeURIComponent(location.pathname + location.search + location.hash)
+          location.href = '/verify.html?redirect=' + redirect
+        }
+      })()
+      `
+    ]
   ],
   vite: { 
     plugins: [ 
