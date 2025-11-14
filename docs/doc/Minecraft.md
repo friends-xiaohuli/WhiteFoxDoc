@@ -74,7 +74,7 @@ title: "Minecraft!"
       icon: { icon: 'material-symbols:archive', color: '#1769AA' },
       name: '下载',
       desc: '获取github下载直链',
-      link: 'https://github.com/friends-xiaohuli/XX-when-damaged/releases/download/20251011/Random-Munch-Monsters_1.21.8-v0.1.zip'
+      link: 'https://github.com/friends-xiaohuli/XX-when-damaged/releases/download/20251011/Random-Munch-Monsters_1.21.8-v0.2.zip'
     }
   ]"
 />
