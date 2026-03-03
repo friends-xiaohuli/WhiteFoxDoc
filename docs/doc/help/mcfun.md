@@ -28,7 +28,7 @@ title: "数据包帮助"
     },
     {
       // image: 'https://www.bilibili.com/favicon.ico',
-      image: '/assets/bilibili.png',
+      image: '/assets/logo/bilibili.png',
       name: 'BiliBili',
       desc: '数据包使用全解！！(by 洛玖Oscar)',
       link: 'https://www.bilibili.com/video/BV1LWZwYEEpV',

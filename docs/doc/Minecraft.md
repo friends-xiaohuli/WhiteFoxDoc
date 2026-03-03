@@ -47,7 +47,7 @@ title: "Minecraft!"
   :items="[
     // 普通图片
     {
-      image: '/assets/bilibili.png',
+      image: '/assets/logo/bilibili.png',
       name: '灵感来源',
       desc: '对的对的，对着视频做的',
       link: 'https://www.bilibili.com/video/BV1wv4JzLEDz',
@@ -56,8 +56,8 @@ title: "Minecraft!"
     // 深浅模式图片
     {
       image: {
-        light: 'https://i.theojs.cn/logo/github.svg',
-        dark: 'https://i.theojs.cn/logo/github-dark.svg',
+        light: '/assets/logo/github.svg',
+        dark: '/assets/logo/github-dark.svg',
         crop: true
       },
       name: 'GitHub',
@@ -117,7 +117,7 @@ title: "Minecraft!"
   :items="[
     // 普通图片
     {
-      image: '/assets/bilibili.png',
+      image: '/assets/logo/bilibili.png',
       name: '实况',
       desc: '卡死了卡死了卡死了，回头就给服务器装几个优化模组..',
       link: 'https://www.bilibili.com/video/BV1F8v1eCEmZ/',
@@ -126,8 +126,8 @@ title: "Minecraft!"
     // 深浅模式图片
     {
       image: {
-        light: 'https://i.theojs.cn/logo/github.svg',
-        dark: 'https://i.theojs.cn/logo/github-dark.svg',
+        light: '/assets/logo/github.svg',
+        dark: '/assets/logo/github-dark.svg',
         crop: true
       },
       name: 'GitHub',
@@ -174,7 +174,7 @@ title: "Minecraft!"
   :items="[
     // 普通图片
     {
-      image: '/assets/bilibili.png',
+      image: '/assets/logo/bilibili.png',
       name: '实况',
       desc: '不知道怎么玩了，这好像不算实况（',
       link: 'https://www.bilibili.com/video/BV13ohdz6ELi/',
@@ -183,8 +183,8 @@ title: "Minecraft!"
     // 深浅模式图片
     {
       image: {
-        light: 'https://i.theojs.cn/logo/github.svg',
-        dark: 'https://i.theojs.cn/logo/github-dark.svg',
+        light: '/assets/logo/github.svg',
+        dark: '/assets/logo/github-dark.svg',
         crop: true
       },
       name: 'GitHub',
@@ -248,7 +248,7 @@ title: "Minecraft!"
   :items="[
     // 普通图片
     {
-      image: '/assets/bilibili.png',
+      image: '/assets/logo/bilibili.png',
       name: '实况',
       desc: '不知道怎么玩了，这好像不算实况（',
       link: 'https://www.bilibili.com/video/BV13ohdz6ELi/',
@@ -257,8 +257,8 @@ title: "Minecraft!"
     // 深浅模式图片
     {
       image: {
-        light: 'https://i.theojs.cn/logo/github.svg',
-        dark: 'https://i.theojs.cn/logo/github-dark.svg',
+        light: '/assets/logo/github.svg',
+        dark: '/assets/logo/github-dark.svg',
         crop: true
       },
       name: 'GitHub',
@@ -305,7 +305,7 @@ title: "Minecraft!"
   :items="[
     // 普通图片
     {
-      image: '/assets/bilibili.png',
+      image: '/assets/logo/bilibili.png',
       name: '灵感来源',
       desc: '对的对的，对着视频做的（',
       link: 'https://www.bilibili.com/video/BV1MoxXzLEXd',
@@ -314,8 +314,8 @@ title: "Minecraft!"
     // 深浅模式图片
     {
       image: {
-        light: 'https://i.theojs.cn/logo/github.svg',
-        dark: 'https://i.theojs.cn/logo/github-dark.svg',
+        light: '/assets/logo/github.svg',
+        dark: '/assets/logo/github-dark.svg',
         crop: true
       },
       name: 'GitHub',
@@ -466,8 +466,8 @@ title: "Minecraft!"
     // 深浅模式图片
     {
       image: {
-        light: 'https://i.theojs.cn/logo/github.svg',
-        dark: 'https://i.theojs.cn/logo/github-dark.svg',
+        light: '/assets/logo/github.svg',
+        dark: '/assets/logo/github-dark.svg',
         crop: true
       },
       name: 'GitHub',

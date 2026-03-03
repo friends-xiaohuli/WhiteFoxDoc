@@ -16,7 +16,7 @@ hero:
       text: Bilibilii
       link: https://space.bilibili.com/515094027
   image:
-      src: /assets/illustration.png
+      src: /assets/logo/illustration.png
       alt: Logo
 
 features:

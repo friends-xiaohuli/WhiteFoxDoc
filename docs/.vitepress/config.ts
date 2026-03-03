@@ -10,7 +10,7 @@ import {
 export default defineConfig({
   head: [
     ['script',{defer: '',async: '',src: 'https://cn.vercount.one/js'}],
-    ['link',{rel:'icon',href:'/assets/logo.png'}],
+    ['link',{rel:'icon',href:'/assets/logo/logo.png'}],
     [
       'script',
       {},
@@ -61,7 +61,7 @@ export default defineConfig({
   title: "WhiteFoxDoc 喵~",
   description: "WhiteFoxDoc",
   themeConfig: {
-    logo: "/assets/logo.png", // 页面上显示的logo
+    logo: "/assets/logo/logo.png", // 页面上显示的logo
 
     nav: [
       { text: 'Home', link: '/' },

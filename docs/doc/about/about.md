@@ -10,7 +10,7 @@ title: "关于白狐"
   :items="[
     // 普通图片
     {
-      image: '/assets/bilibili.png',
+      image: '/assets/logo/bilibili.png',
       name: 'B站主页',
       desc: '关注白狐喵~关注白狐喵！',
       link: 'https://space.bilibili.com/515094027'
@@ -24,8 +24,8 @@ title: "关于白狐"
     // 深浅模式图片
     {
       image: {
-        light: 'https://i.theojs.cn/logo/github.svg',
-        dark: 'https://i.theojs.cn/logo/github-dark.svg',
+        light: '/assets/logo/github.svg',
+        dark: '/assets/logo/github-dark.svg',
         crop: true
       },
       name: 'GitHub主页',
