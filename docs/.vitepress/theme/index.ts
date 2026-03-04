@@ -128,11 +128,43 @@ export default {
         menus: { disable: true },
         statusBar: { disable: true },
         tips:{ style: {width:200} },
-        dockedPosition:"right"
+        dockedPosition:"right",
       })
     })
     const route = useRoute()
     imageViewer(route)
+
+    // //[live2d-widget] https://github.com/stevenjoezhang/live2d-widget
+    // // 1. 强制提升看板娘的图层层级（防遮挡核心代码）
+    //   if (!document.querySelector('#waifu-style-override')) {
+    //     const style = document.createElement('style')
+    //     style.id = 'waifu-style-override'
+    //     // z-index: 99999 保证她永远在页面的最上层
+    //     style.innerHTML = `
+    //       #waifu {
+    //         z-index: 99999 !important; 
+    //       }
+    //     `
+    //     document.head.appendChild(style)
+    //   }
+
+    //   // 2. 加载图标字体库
+    //   if (!document.querySelector('#fa-style')) {
+    //     const link = document.createElement('link')
+    //     link.id = 'fa-style'
+    //     link.rel = 'stylesheet'
+    //     link.href = 'https://fastly.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css'
+    //     document.head.appendChild(link)
+    //   }
+
+    //   // 3. 加载看板娘主脚本
+    //   if (!document.querySelector('#waifu-script')) {
+    //     const script = document.createElement('script')
+    //     script.id = 'waifu-script'
+    //     script.src = '/live2dwidge/autoload.js'
+    //     document.body.appendChild(script)
+    //   }
+    
   },
 
   // ...

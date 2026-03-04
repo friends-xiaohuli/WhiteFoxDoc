@@ -20,6 +20,61 @@ title: "Minecraft!"
 
 ---
 
+### 区块测试-随机状态效果
+
+> EN：Random Chunk Effects
+>
+> 命名空间：qkcs
+
+数据包仅1.21.11可用。
+
+由于数据包结构问题，截止1.21.11，仅支持**原版**的40种药水效果。
+
+可尝试自行通过代码新增或修改。
+
+::: details 展开查看图片
+<div style="display:flex; justify-content:center; gap:20px;">
+  <img src="/assets/miaocraft/qkcs01.png" alt="qkcs-img01" style="width:800px;" />
+</div>
+:::
+
+<Links
+  :grid="2"
+  :items="[
+    // 普通图片
+    {
+      image: '/assets/logo/bilibili.png',
+      name: '灵感来源',
+      desc: '对的对的，对着视频做的',
+      link: 'https://www.bilibili.com/video/BV1PwP7zSEJc',
+      linkText: '立即查看'
+    },
+    // 深浅模式图片
+    {
+      image: {
+        light: '/assets/logo/github.svg',
+        dark: '/assets/logo/github-dark.svg',
+        crop: true
+      },
+      name: 'GitHub',
+      desc: '跳转Github地址',
+      link: 'https://github.com/friends-xiaohuli/ChunkCollection',
+      linkText: '跳转链接'
+    }
+  ]"
+/>
+
+<Links
+  :items="[
+    {
+      icon: { icon: 'material-symbols:archive', color: '#1769AA' },
+      name: '下载',
+      desc: '获取github下载直链',
+      link: 'https://github.com/friends-xiaohuli/ChunkCollection/releases/download/20260305-qkcs.0.1/Random.Chunk.Effects-1.21.11-0.1.zip'
+    }
+  ]"
+/>
+
 ### 吃东西就会随机生成生物
 
 > EN：Random Munch Monsters
@@ -89,10 +144,10 @@ title: "Minecraft!"
 
 | 编号 | 玩法 | 文件夹名字 | 游戏版本 |
 | :----: | :----:| :----: | :----: |
-|1  | [受伤生物数量翻倍](#受伤生物数量翻倍) | sdshswfb | 1.21-1.21.9 |
-|2  | [受到伤害就随机传送](#受到伤害就随机传送) | sdshsjcs | 1.21.8 |
-|3  | [受到伤害就删物品](#受到伤害就删物品) | sdshswp | 1.21.8 |
-|4  | [受到伤害才扩大边界](#受到伤害才扩大边界)| sdshbjkd | 1.21.8 |
+| 1 | [受伤生物数量翻倍](#受伤生物数量翻倍) | sdshswfb | 1.21-1.21.9 |
+| 2 | [受到伤害就随机传送](#受到伤害就随机传送) | sdshsjcs | 1.21.8 |
+| 3 | [受到伤害就删物品](#受到伤害就删物品) | sdshswp | 1.21.8 |
+| 4 | [受到伤害才扩大边界](#受到伤害才扩大边界)| sdshbjkd | 1.21.8 |
 
 ---
 
