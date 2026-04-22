@@ -32,6 +32,10 @@ title: "Minecraft!"
 
 可尝试自行通过代码新增或修改。
 
+::: warning 注意  
+由于性能原因，**多人游戏可能导致TPS过高或超时**，可以使用仅对玩家生效而非所有生物生效的数据包版本。
+:::
+
 ::: details 展开查看图片
 <div style="display:flex; justify-content:center; gap:20px;">
   <img src="/assets/miaocraft/qkcs01.png" alt="qkcs-img01" style="width:800px;" />
@@ -484,6 +488,7 @@ title: "Minecraft!"
 | @大炒面制造者 Cen | [【当你无法「驯服一匹马」就会被淘汰出局？？！】](https://www.bilibili.com/video/BV1YuZUY5ECv) | 25.04.04 | - |
 | @呦梦则吖 | [【只要听话就不会死】](https://www.bilibili.com/video/BV1XpTizZE6x) | 25.06.10 | - |
 | @诸天任我游 | [【我的世界  不听话就会死   遗憾落败】](https://www.bilibili.com/video/BV1aXRzYGEo5) | 25.04.06 | - |
+| @蛙蛙大天才 | [【我的世界！只要听话就不会死！】](https://www.douyin.com/video/7596684765818850610) | 26.01.18 | 仅dy源 |
 
 ##### tag标签
 
